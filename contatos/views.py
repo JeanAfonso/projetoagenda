@@ -31,11 +31,10 @@ def busca(request):
     termo = request.GET.get("termo")
 
     if termo is None or not termo:
-        messages.add_message(request,
-        messages.ERROR,
-        'Campo pesquisa não pode ser vazio.'
+        messages.add_message(
+            request, messages.ERROR, "Campo pesquisa não pode ser vazio."
         )
-        return redirect('index')
+        return redirect("index")
 
     campos = Concat("nome", Value(" "), "sobrenome")
     contatos = Contato.objects.annotate(nome_completo=campos).filter(

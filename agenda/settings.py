@@ -123,8 +123,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'templates/static'
 ]
-MEDIA_ROOT = BASE_DIR / 'media'
-MEDIA_URL = 'media/'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -142,3 +141,5 @@ MESSAGE_TAGS = {
 }
 
 
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = 'media/'
